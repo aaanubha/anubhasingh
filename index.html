@@ -68,7 +68,30 @@
 .sticky li p a:hover{
     text-decoration:underline;
 }
+.img {
+  float: right;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
 
+.active, .accordion:hover {
+  background-color: #9591cc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
       
     </style>
 
@@ -205,14 +228,15 @@
         <br>
         <div class="w3-row">
           <a href="javascript:void(0)" onclick="openCity(event, 'London');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: white ;">Mount Carmel College | 2022</p></div>
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: #9591cc
+              ;">Mount Carmel College | 2022</p></div>
           </a>
           <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: white ;">Sophia High School | 2019</p></div>
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: #9591cc ;">Sophia High School | 2019</p></div>
           </a>
           <!---->
           <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: white ;">Shemford Doon | 2017</p></div>
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: #9591cc ;">Shemford Doon | 2017</p></div>
           </a>
         </div>
       
@@ -334,13 +358,74 @@
 
       <!-- <section> close ============================-->
       <!-- ============================================-->
+      <div class="container">
+        <div class="text-center">
+          
+          <h1 class="display-6 fw-semi-bold">Extra-Curriculars</h1>
+          <br>
+      <button class="accordion">Secretary of Reel Run Productions | 2021-22</button>
+      <div class="panel">
+        <br><p>As the Secretary of the Media and Tech team of MCC, (that covers all the college events, and produces trailers and after movies for the same) I had the opportunity to interact and collaborate with various professionals for events and workshops. Apart from this, I learnt various new skills in videography, video editing and illustration. </p>
+      </div>
+      
+      <button class="accordion">
+        Secretary of Computer Science | 2020-21</button>
+      <div class="panel">
+        <br><p>As a Computer Science secretary for the entire Undergrad dept. at my college, I had the opportunity to organize events, talks and workshops for my fellow students. Throughout the year, apart from intra college department activities, I also curated various competitions for national level fests.</p>
+      </div>
+      
+      <button class="accordion">Guitarist in Indian Music Association | 2020-22</button>
+      <div class="panel">
+        <br><p>
+          As the guitarist in the Indian Music Association ‘Moksha’, I took part in various college fests in Bangalore. I also had the opportunity to perform many times in my college, for events both online and offline.</p>
+      </div>
 
+      <button class="accordion">
+        Head of Editing at
+        Under 25, MCC | 2020-21</button>
+      <div class="panel">
+        <br><p>At Under 25 (a youth culture brand), as the head of Editing I was in charge of all the video content going up on our Instagram page. I shot and edited trailers for our fests as well.
+
+          As I was experimenting with 2-D animation at the time, I animated clips for various content, the most exiting one being an animated video about the Indian Education System.</p>
+      </div>
+
+      <button class="accordion">
+        Stagecraft: DramaSoc | 2019-22</button>
+      <div class="panel">
+        <br><p>As a part of the dramatics association, I had the opportunity to talk part in various intra and inter college plays.</p>
+      </div>
+
+      <button class="accordion">
+        Meraz Mandali | 2020-21</button>
+      <div class="panel">
+        <br><p>I was a part of an art community based in Bangalore. While being a part of Meraz, I had the opportunity to be a part of various open mic events. Apart from this, I was a designed and animator for the team, where I collaborated with many poets and writers.</p>
+      </div>
+
+      </div>
+      </div>
+      <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+      </script>
 
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
+        <br><br><br><br>
       <section class="bg-secondary">
-
+        
         <div class="container">
          
             <div class="col-xl-4 pt-2 pt-xl-0">
