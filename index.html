@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+     
+     .typed-out{
+        overflow: hidden;
+        border-right: .15em solid orange;
+        white-space: nowrap;
+        animation: typing 2s steps(20, end) forwards, blinking .8s infinite;
+        font-size: 1.6rem;
+        width: 0;
+      }
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blinking {
+        from { border-color: transparent }
+        to { border-color: orange; }
+      }
+      .sticky-container{
+    padding:0px;
+    margin:0px;
+    position:fixed;
+    right:-130px;
+    top:230px;
+    width:210px;
+    z-index: 1100;
+}
+.sticky li{
+    list-style-type:none;
+    background-color:#fff;
+    color:#efefef;
+    height:43px;
+    padding:0px;
+    margin:0px 0px 1px 0px;
+    -webkit-transition:all 0.25s ease-in-out;
+    -moz-transition:all 0.25s ease-in-out;
+    -o-transition:all 0.25s ease-in-out;
+    transition:all 0.25s ease-in-out;
+    cursor:pointer;
+}
+.sticky li:hover{
+    margin-left:-115px;
+}
+.sticky li img{
+    float:left;
+    margin:5px 4px;
+    margin-right:5px;
+}
+.sticky li p{
+    padding-top:5px;
+    margin:0px;
+    line-height:16px;
+    font-size:11px;
+}
+.sticky li p a{
+    text-decoration:none;
+    color:#2C3539;
+}
+.sticky li p a:hover{
+    text-decoration:underline;
+}
+
+      
+    </style>
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================
+    <title>Safia || Landing Template</title>-->
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.png">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+
+    <link href="vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  </head>
+
+
+  <body>
+
+    <div class="sticky-container">
+      <ul class="sticky">
+          <li>
+              <img src="Images/bgithub.png" width="32" height="32">
+              <p><a href="https://github.com/aaanubha" target="_blank">Github</a></p>
+          </li>
+          <li>
+              <img src="Images/linkdin.png" width="32" height="32">
+              <p><a href="https://www.linkedin.com/in/anubha-singh-b19280190/" target="_blank">LinkedIn</a></p>
+          </li>
+
+      </ul>
+  </div>
+
+      <section class="mt-6">
+
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-9 col-lg-8 col-xl-5">
+              <div class = "typed-out">
+              <h1 class="display-3 lh-sm">Hi, I'm Anubha</h1>
+              </div>
+            </div>
+            <div class="col-md-9 col-xl-5">
+              <p class="fs-2">I'm a 3rd Year student at Mount Carmel College, Bangalore majoring in Computer Science, Mathematics and Statistics (BSc CMS). I'm an Army Brat with a mixed cultural identity and people skills. A member of multiple clubs and the owner of an Etsy Store.</p>
+              <!--<form method="get" action="C:\Users\anubh\Downloads\Safia-v1.0.1\public\assets\docs\cv.pdf"></form>
+              <button class="btn btn-primary mt-3">Download Resume</button>-->
+            </div>
+          </div>
+        </div>
+        <!-- end of .container-->
+
+        </section>
+
+      <!-- <section> begin ============================-->
+      
+      <section>
+
+        <div class="container">
+          <h1 class="display-6 fw-semi-bold">Projects</h1>
+          <p class="fs-2">Here's a few of the 14 projects I did as a part of my course work!</p>
+          <div class="row mb-4 mt-6">
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><img src="assets/img/gallery/dashboardicon.png" alt="C Graphics Project" style="width:48px;height:48px;" />
+                  <h3 class="pt-3 lh-base">C Graphics Project</h3>
+                  <p class="mb-0">My team of 3 designed a project to demonstrate the usage of graphics in C. We experimented with various mathematical functions to depict basic shapes. Our final submission included rain, a sunrise and a rainbow. </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><a href="https://github.com/aaanubha/space-invaders-java"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
+                  <h3 class="pt-3 lh-base">Java: Space Invaders</h3>
+                  <p class="mb-0">As our 5th semester project, my partner and I developed code for the popular game ‘Space Invaders’. We use javafx and showed the use of various concepts we learnt in our lectures such as Inheritance, Static & This keyword, access specifiers, Objects, Loops, Arrays etc.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><img src="assets/img/gallery/trilored.png" alt="HTML: Web Design" style="width:48px;height:48px;" />
+                  <h3 class="pt-3 lh-base">HTML: Web Design</h3>
+                  <p class="mb-0">In this project, we showed the use of HTML, CSS and Javascript and designed an interactive website on the not so popular idea of ‘Book Cafes’. We used various design and dynamic HTML concept which enables the users to browse through a list of books and meals, add them to their cart, and make user accounts to pay for the same.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><a href="https://github.com/aaanubha/eunoia_final"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
+                  <h3 class="pt-3 lh-base">Eunoia- Final Project</h3>
+                  <p class="mb-0">As a part of our final project, my team and I created a student app using Flutter that allows the user to create a To-Do list, upload notes and have a virtual study ambiance with music</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><img src="assets/img/gallery/profile.png" alt="Profiles" style="width:48px;height:48px;" />
+                  <h3 class="pt-3 lh-base">Research Paper</h3>
+                  <p class="mb-0">ABSTRACT:In recent years, there have been numerous improvements and changes in the field of STEM. Many researches showed that visual programming languages like Scratch and programming have a positive effect on understanding of concepts. In this paper, we aim to discover the relationship between coding practices and understanding of CS and mathematical concepts.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><img src="assets/img/gallery/folder.png" alt="Folders" style="width:48px;height:48px;" />
+                  <h3 class="pt-3 lh-base">Descriptive and Applied Statistics Project</h3>
+                  <p class="mb-0">In this project, my team of 4 did a presentation describing in detail the change in agricultural practices over the past decade. We took data from official Indian statistics websites such as NSSO, NSO, NCRB, and applied concepts learnt to it. In order to make the presentation more appealing to other students at home, we used memes in order to explain our working.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+      <div class="container">
+        <div class="row align-items-center">
+      <div class="w3-container">
+        <h1 class="display-6 fw-semi-bold">Education</h1>
+        <br>
+        <div class="w3-row">
+          <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: white ;">Mount Carmel College | 2022</p></div>
+          </a>
+          <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: white ;">Sophia High School | 2019</p></div>
+          </a>
+          <!---->
+          <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: white ;">Shemford Doon | 2017</p></div>
+          </a>
+        </div>
+      
+        <div id="London" class="w3-container city" style="display:none">
+          <br>
+          <h2>Sakalya Wisdom Foundation</h2>
+          <br>
+          <p>
+            2019 - 2022<br>
+            Mount Carmel College, Bangalore<br><br>
+
+            BSc CMS (Computer Science, Mathematics and Statistics)<br><br>
+
+            • Expected First Class Exemplary<br>
+            • Secretary of Computer Science<br>
+            • Secretary of Reel Run Productions<br></p>
+        </div>
+      
+        <div id="Paris" class="w3-container city" style="display:none">
+          <br>
+          <h2>Sophia High School, Bangalore</h2>
+          <br>
+            
+            2017 - 2019<br>
+            Sophia High School, Bangalore <br>
+            XII<br><br>
+
+            • Physics (81), Chemistry (75), Mathematics (92), Computer Science (97) in ISC<br>
+
+            • Student Council<br></div>
+      
+        <div id="Tokyo" class="w3-container city" style="display:none">
+          <br>
+          <h2>Shemford Doon, Dehradun</h2>
+          <p>
+            <br>
+            2015 - 2017<br>
+            Shemford Doon, Dehradun<br>
+            X<br><br>
+            
+            • 10 CGPA in CBSE<br>
+            • Recepient of Chairman's Medal <br>
+            • Student Council<br>
+            
+            </p>
+        </div>
+      </div>
+      </div>
+      </div>
+      
+      <script>
+      function openCity(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" w3-border-yellow", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " w3-border-yellow";
+      }
+      </script>
+
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="mt-5">
+
+        <div class="container">
+          <div class="text-center">
+            
+            <h1 class="display-6 fw-semi-bold">Experience</h1>
+          </div>
+          <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
+            <div class="col-md-7 col-lg-6 order-md-1"><img class="w-100" src="Images\website.png" alt="..." /></div>
+            <div class="col-md-5 col-lg-4">
+              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 mt-5 mt-md-0">Sakalya Wisdom Foundation</h3>
+              <p class="fs-xl-1 ls-3 pe-xl-2"> <br>
+                2020 - Present<br>
+                <a href="https://www.sakalyawisdom.org/"><u>Sakalya Wisdom Foundation</u></a><br>
+                <p style="color: white;">Social Media Manager and Website Designer</p><br>
+                <br>
+
+                • Designed the website for Sakalya Prep- The Holistic Preschool. <br>
+                • Developed and customized worksheets, videos and other resources for the school<br>
+                • Managed and generated growth in the organisation’s social media in order to nurture and accelerate 
+                community engagement in light of COVID-19<br>
+
+                
+                </p>
+            </div>
+          </div>
+          <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
+            <div class="col-md-7 col-lg-6 false"><img class="w-100" src="Images\etsy.png" alt="..." /></div>
+            <div class="col-md-5 col-lg-4">
+              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 mt-5 mt-md-0">Etsy Shop Owner</h3>
+              <p class="fs-xl-1 ls-3 pe-xl-2"> 
+                <br>Dec 2020- May 2022<br>
+                <p style="color: white;">Etsy Shop Owner</p><br>
+                
+                Etsy: anubhasierra<br>
+                Instamojo: anubhasierra<br><br>
+                
+                After getting back into reading while Covid-19, and meeting a ton of people around the globe with the same book interests as mine, I realized how a lot of readers liked the idea of owning stickers/bookmarks of their favorite book characters. And so began the journey of my Etsy and Instamojo shop, where I now sell fanart stickers of books and TV shows.</p>
+            </div>
+          </div>
+         
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="bg-secondary">
+
+        <div class="container">
+         
+            <div class="col-xl-4 pt-2 pt-xl-0">
+              <p class="mb-0 text-center text-xl-end"> © 2022 by Anubha Singh
+              </p>
+            </div>
+            
+          </div>
+        </div>
+        <!-- end of .container-->
+
+      </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="vendors/swiper/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <script src="assets/js/theme.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&amp;display=swap" rel="stylesheet">
+  </body>
+
+</html>
