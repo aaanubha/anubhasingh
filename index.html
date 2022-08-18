@@ -7,8 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+
+      body {margin:0;}
+
+      .navbar {
+        overflow: hidden;
+        background-color: #7E8BB6;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      .navbar a {
+        float: right;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .navbar a:hover {
+        background: #ddd;
+        color: black;
+      }
+
+      .main {
+        padding: 16px;
+        margin-bottom: 30px;
+        height: 1500px; /* Used in this example to enable scrolling */
+      }
      
      .typed-out{
         overflow: hidden;
@@ -159,14 +191,14 @@
       <section>
 
         <div class="container">
-          <h1 class="display-6 fw-semi-bold">Projects</h1>
+          <h1 class="display-6 fw-semi-bold" id="Key-Projects">Key Projects</h1>
           <p class="fs-2">Here's a few of the 14 projects I did as a part of my course work!</p>
           <div class="row mb-4 mt-6">
             <div class="col-md-6">
               <div class="border rounded-1 border-700 h-100 features-items">
                 <div class="p-5"><img src="assets/img/gallery/dashboardicon.png" alt="C Graphics Project" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base">C Graphics Project</h3>
-                  <p class="mb-0">My team of 3 designed a project to demonstrate the usage of graphics in C. We experimented with various mathematical functions to depict basic shapes. Our final submission included rain, a sunrise and a rainbow. </p>
+                  <p class="mb-0">Designed a project to demonstrate the usage of graphics in C. Experimented with various mathematical functions to depict basic shapes. The final submission included rain, a sunrise and a rainbow. </p>
                 </div>
               </div>
             </div>
@@ -174,7 +206,7 @@
               <div class="border rounded-1 border-700 h-100 features-items">
                 <div class="p-5"><a href="https://github.com/aaanubha/space-invaders-java"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
                   <h3 class="pt-3 lh-base">Java: Space Invaders</h3>
-                  <p class="mb-0">As our 5th semester project, my partner and I developed code for the popular game ‘Space Invaders’. We use javafx and showed the use of various concepts we learnt in our lectures such as Inheritance, Static & This keyword, access specifiers, Objects, Loops, Arrays etc.</p>
+                  <p class="mb-0">Developed code for the popular game ‘Space Invaders’. Used javafx and showed the use of various concepts learnt in lectures such as Inheritance, Static & This keyword, access specifiers, Objects, Loops, Arrays etc.</p>
                 </div>
               </div>
             </div>
@@ -184,7 +216,7 @@
               <div class="border rounded-1 border-700 h-100 features-items">
                 <div class="p-5"><img src="assets/img/gallery/trilored.png" alt="HTML: Web Design" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base">HTML: Web Design</h3>
-                  <p class="mb-0">In this project, we showed the use of HTML, CSS and Javascript and designed an interactive website on the not so popular idea of ‘Book Cafes’. We used various design and dynamic HTML concept which enables the users to browse through a list of books and meals, add them to their cart, and make user accounts to pay for the same.</p>
+                  <p class="mb-0">Designed an interactive website for a 'Book Cafe'. Used HTML, CSS & Javascript and enabled the users to browse through a list of books and meals, add them to their cart, and make user accounts to pay for the same.</p>
                 </div>
               </div>
             </div>
@@ -192,7 +224,7 @@
               <div class="border rounded-1 border-700 h-100 features-items">
                 <div class="p-5"><a href="https://github.com/aaanubha/eunoia_final"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
                   <h3 class="pt-3 lh-base">Eunoia- Final Project</h3>
-                  <p class="mb-0">As a part of our final project, my team and I created a student app using Flutter that allows the user to create a To-Do list, upload notes and have a virtual study ambiance with music</p>
+                  <p class="mb-0">Created a student app using Flutter and Google Firebase that allows the user to create a To-Do list, upload notes and have a virtual study ambiance with music</p>
                 </div>
               </div>
             </div>
@@ -210,7 +242,25 @@
               <div class="border rounded-1 border-700 h-100 features-items">
                 <div class="p-5"><img src="assets/img/gallery/folder.png" alt="Folders" style="width:48px;height:48px;" />
                   <h3 class="pt-3 lh-base">Descriptive and Applied Statistics Project</h3>
-                  <p class="mb-0">In this project, my team of 4 did a presentation describing in detail the change in agricultural practices over the past decade. We took data from official Indian statistics websites such as NSSO, NSO, NCRB, and applied concepts learnt to it. In order to make the presentation more appealing to other students at home, we used memes in order to explain our working.</p>
+                  <p class="mb-0">Project and presentation describing in detail the change in agricultural practices over the past decade. We took data from official Indian statistics websites such as NSSO, NSO, NCRB, and applied concepts learnt to it. In order to make the presentation more appealing to other students at home, we used memes in order to explain our working.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><img src="assets/img/gallery/profile.png" alt="Profiles" style="width:48px;height:48px;" />
+                  <h3 class="pt-3 lh-base">Research Paper</h3>
+                  <p class="mb-0">ABSTRACT:In recent years, there have been numerous improvements and changes in the field of STEM. Many researches showed that visual programming languages like Scratch and programming have a positive effect on understanding of concepts. In this paper, we aim to discover the relationship between coding practices and understanding of CS and mathematical concepts.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="border rounded-1 border-700 h-100 features-items">
+                <div class="p-5"><img src="assets/img/gallery/folder.png" alt="Folders" style="width:48px;height:48px;" />
+                  <h3 class="pt-3 lh-base">Descriptive and Applied Statistics Project</h3>
+                  <p class="mb-0">Project and presentation describing in detail the change in agricultural practices over the past decade. We took data from official Indian statistics websites such as NSSO, NSO, NCRB, and applied concepts learnt to it. In order to make the presentation more appealing to other students at home, we used memes in order to explain our working.</p>
                 </div>
               </div>
             </div>
@@ -225,7 +275,7 @@
       <div class="container">
         <div class="row align-items-center">
       <div class="w3-container">
-        <h1 class="display-6 fw-semi-bold">Education</h1>
+        <h1 class="display-6 fw-semi-bold" id="Education">Education</h1>
         <br>
         <div class="w3-row">
           <a href="javascript:void(0)" onclick="openCity(event, 'London');">
@@ -314,7 +364,7 @@
         <div class="container">
           <div class="text-center">
             
-            <h1 class="display-6 fw-semi-bold">Experience</h1>
+            <h1 class="display-6 fw-semi-bold" id="Experience">Experience</h1>
           </div>
           <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
             <div class="col-md-7 col-lg-6 order-md-1"><img class="w-100" src="Images\website.png" alt="..." /></div>
@@ -362,7 +412,7 @@
       <div class="container">
         <div class="text-center">
           
-          <h1 class="display-6 fw-semi-bold">Extra-Curriculars</h1>
+          <h1 class="display-6 fw-semi-bold" id="Extra-Curriculars">Extra-Curriculars</h1>
           <br>
       <button class="accordion">Secretary of Reel Run Productions | 2021-22</button>
       <div class="panel">
@@ -439,6 +489,14 @@
         <!-- end of .container-->
 
       </section>
+
+      <!-- hover menu-->
+      <div class="navbar">
+        <a href="#Key-Projects">Key Projects</a>
+        <a href="#Education">Education</a>
+        <a href="#Experience">Experience</a>
+        <a href="#Extra-Curriculars">Extra-Curriculars</a>
+      </div>
       <!-- <section> close ============================-->
       <!-- ============================================-->
 
