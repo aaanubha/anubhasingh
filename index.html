@@ -7,41 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-
-      body {margin:0;}
-
-      .navbar {
-        overflow: hidden;
-        background-color: #7E8BB6;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-
-      .navbar a {
-        float: right;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-
-      .navbar a:hover {
-        background: #ddd;
-        color: black;
-      }
-
-      .main {
-        padding: 16px;
-        margin-bottom: 30px;
-        height: 1500px; /* Used in this example to enable scrolling */
-      }
-     
+    <style>     
      .typed-out{
         overflow: hidden;
         border-right: .15em solid orange;
@@ -120,11 +87,32 @@
   background-color: #9591cc; 
 }
 
-.panel {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-}
+  .panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
+  .navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .navbar a:hover {
+    transition: 0.5s;
+    margin-top: -10px;
+  }
       
     </style>
 
@@ -151,7 +139,6 @@
 
 
   <body>
-    <div class="main">
     <div class="sticky-container">
       <ul class="sticky">
           <li>
@@ -489,7 +476,7 @@
         <!-- end of .container-->
 
       </section>
-    </div>
+
 
       <!-- hover menu-->
       <div class="navbar">
