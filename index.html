@@ -92,27 +92,13 @@
     display: none;
     overflow: hidden;
   }
-  .navbar {
-  overflow: hidden;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-.navbar a {
-  float: right;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.navbar a:hover {
-	transition: 0.5s;
-	margin-top: -10px;
-}
+  #menu {
+    position: fixed;
+    right: 0;
+    top: 90%;
+    width: 8em;
+    margin-top: -2.5em;
+  }
       
     </style>
 
@@ -141,12 +127,12 @@
   <body>
 
     <!-- hover menu-->
-    <div class="navbar">
-      <a href="#Key-Projects">Key Projects</a>
-      <a href="#Education">Education</a>
-      <a href="#Experience">Experience</a>
-      <a href="#Extra-Curriculars">Extra-Curriculars</a>
-    </div>
+    <ul id=menu style="list-style-type:none">
+      <li><a href="#Key-Projects">Key Projects</a>
+      <li><a href="#Education">Education</a>
+      <li><a href="#Experience">Experience</a>
+      <li><a href="#Extra-Curriculars">Extra-Curriculars</a>
+      </ul>
     <!-- <section> close ============================-->
 
     <div class="sticky-container">
