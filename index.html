@@ -67,6 +67,124 @@
   #content-mobile {display: block;}
 
   }
+
+  .CV-page {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 0 2em;
+  color: #0d1521;
+  font-size: 1em;
+}
+
+@media all and (max-width: 500px) {
+  .CV-page {
+    padding: 0 1em;
+  }
+}
+/* if IE<=7 */
+
+.CV-page\ {
+  width: 1100px;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.CV-secondaryHeading {
+  position: relative;
+  margin: 2em 0 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* Grid
+****************************************************/
+
+.CV-grid {
+  display: table;
+}
+
+.CV-grid-column {
+  display: table-cell;
+}
+
+.CV-timeline {
+  position: relative;
+  margin: 0 0 0 0.5em;
+  padding-left: 1.5em;
+  border-left: solid 1px #4272a9;
+}
+
+.CV-timeline:first-of-type {
+  margin-top: 1em;
+}
+
+.CV-timeline:last-of-type {
+  border-left-color: transparent;
+}
+
+.CV-timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -0.5em;
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: solid 1px #4272a9;
+  background-color: #0e0d26;
+  border-radius: 50%;
+}
+
+.CV-timeline-heading {
+  margin: 0;
+  padding-bottom: 0.5em;
+  line-height: 1em;
+  font-weight: normal;
+  -webkit-transform: translateY(-0.1em);
+  -ms-transform: translateY(-0.1em);
+  transform: translateY(-0.1em);
+}
+
+.CV-timeline-heading-title {
+  line-height: 1;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.CV-timeline-heading-location {
+  font-size: 0.9em;
+  color: #bbdefb;
+}
+
+.CV-timeline-heading-duration {
+  display: block;
+  font-size: 0.8em;
+  color: #bbdefb;
+}
+
+.CV-timeline-details {
+  display: block;
+  font-size: 15px;
+  color: rgb(203, 215, 234);
+  margin: 0;
+  padding-bottom: 2em;
+  padding: 0 0 2em 1em;
+  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
+}
+
+.CV-timeline-details-item {
+  margin-bottom: 0.5em;
+}
+
+.CV-card-col{
+    background-color: #fff;
+    opacity: 0.3;
+}
+.CV-card{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
       
     </style>
 
@@ -232,7 +350,7 @@
 
             BSc CMS (Computer Science, Mathematics and Statistics)<br><br>
 
-            • Expected First Class Exemplary<br>
+            • First Class Exemplary<br>
             • Secretary of Computer Science<br>
             • Secretary of Reel Run Productions<br></p>
         </div>
@@ -290,44 +408,52 @@
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
-      <section class="mt-5">
 
-        <div class="container">
-          <div class="text-center">
-            
-            <h1 class="display-6 fw-semi-bold" id="Experience">Experience</h1>
-          </div>
-          <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
-            <div class="col-md-7 col-lg-6 order-md-1"><img class="w-100" src="Images\website.png" alt="..." /></div>
-            <div class="col-md-5 col-lg-4">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 mt-5 mt-md-0">Sakalya Wisdom Foundation</h3>
-              <p class="fs-xl-1 ls-3 pe-xl-2"> <br>
-                2020 - Present<br>
-                <a href="https://www.sakalyawisdom.org/"><u>Sakalya Wisdom Foundation</u></a><br>
-                <p style="color: white;">Digital Strategist</p><br>
-                <br>
-
-                • Designed and maintained the website for Sakalya Prep- The Holistic Preschool. <br>
-                • Developed and customized worksheets, videos and other resources for the school <br>
-                • Planned marketing campaigns, curated personalized customer experience and optimized different marketing channels and budget<br>
-              </p>
-            </div>
-          </div>
-          <div class="row mt-6 flex-center justify-content-xl-evenly px-xl-5">
-            <div class="col-md-7 col-lg-6 false"><img class="w-100" src="Images\etsy.png" alt="..." /></div>
-            <div class="col-md-5 col-lg-4">
-              <h3 class="fs-xl-7 fs-lg-4 fs-md-3 mt-5 mt-md-0">Etsy Shop Owner</h3>
-              <p class="fs-xl-1 ls-3 pe-xl-2"> 
-                <br>Dec 2020- May 2022<br>
-                <p style="color: white;">Etsy Shop Owner</p><br>
-                
-                Etsy: anubhasierra<br>
-                Instamojo: anubhasierra<br><br>
-                
-                After getting back into reading while Covid-19, and meeting a ton of people around the globe with the same book interests as mine, I realized how a lot of readers liked the idea of owning stickers/bookmarks of their favorite book characters. And so began the journey of my Etsy and Instamojo shop, where I now sell fanart stickers of books and TV shows.</p>
-            </div>
-          </div>
-         
+          <!---  ---------------------  EXPERIENCES  --------------------------- --->
+            <main class="CV-page">
+                <div class="CV-grid">
+                  <div class="CV-grid-column">
+                    <div class="CV-jobs">
+                      <h2 class="CV-secondaryHeading CV-jobs-heading">Relevant Experience</h2>
+                      <section class="CV-timeline CV-job ">
+                        <div class="CV-card">
+                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title"> Digital Strategist  </span>&#8211; <span class="CV-timeline-heading-location">Sakalya Wisdom Foundation </span><small class="CV-timeline-heading-duration">July 2022 - Present</small></h3>
+                        <li class="CV-timeline-details">● Designed and maintained the website for Sakalya Prep- The Holistic Preschool <br>
+                            ● Developed and customized worksheets, videos, and other resources for the school <br>
+                            ● Spearheaded marketing campaigns, curated personalized customer experience, and optimized different marketing channels and budget <br>
+                        </div>
+                    </section>
+        
+                    <section class="CV-timeline CV-job ">
+                        <div class="CV-card">
+                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title"> Machine Learning Intern</span>&#8211; <span class="CV-timeline-heading-location">Analysed Variant Labs </span><small class="CV-timeline-heading-duration">Oct 2022 - Present</small></h3>
+                        <li class="CV-timeline-details">Built dataset, performed data preprocessing, and trained models using Azure ML. Created a Flask API for the 
+                            implementation of the model.
+                        </div>
+                    </section>
+        
+                    <section class="CV-timeline CV-job ">
+                        <div class="CV-card">
+                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title">Full Stack Developer</span>&#8211; <span class="CV-timeline-heading-location">Lean IT India Private Limited </span><small class="CV-timeline-heading-duration">Dec 2021- Jan 2022</small></h3>
+                        <li class="CV-timeline-details">
+                            Led a team of 5 while implementing a full-stack website using HTML, CSS, JavaScript, and MySQL that can 
+                            effectuate features such as creating new accounts, scheduling video calls, and storing details in the database.
+                        </div>
+                    </section>
+        
+                    <section class="CV-timeline CV-job ">
+                        <div class="CV-card">
+                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title">Machine Learning Developer</span>&#8211; <span class="CV-timeline-heading-location">91 Square Feet</span><small class="CV-timeline-heading-duration">June 2021- July 2022</small></h3>
+                        <li class="CV-timeline-details">Developed a service to automate the process of annotation by matching wrongly annotated products with the correct 
+                            ones existing in the catalog.
+                            
+                        </div>
+                    </section>
+        
+                    </div>
+                  </div>
+                </div>
+              </main>
         </div>
         <!-- end of .container-->
 
