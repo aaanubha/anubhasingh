@@ -1,0 +1,105 @@
+
+
+/* projects */
+
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+        max-width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 100%; /* 1 card per row on small screens */
+        max-width: 100%;
+    }
+  }
+  
+  
+  
+  
+  /* Container to center the grid */
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #121212; /* Adjust according to your original background color */
+  }
+  
+  /* Grid layout for projects */
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* grid-template-columns: repeat(3, 1fr);  */
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; 
+  }
+  
+  /* Project card styling */
+  .project-card {
+    flex: 1 1 calc(33.333% - 20px); /* 33.333% width minus the gap to fit 3 cards in a row */
+    max-width: calc(33.333% - 20px);
+    background-color: #1e1e1e; /* Adjust to original card color */
+    border-radius: 8px;
+    padding: 20px;
+    color: #ffffff; /* Adjust to original text color */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-card-header .icon {
+    color: #00bfa5; /* Adjust to match your original accent color */
+    margin-left: 10px;
+  }
+  
+  .project-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Adjust font size as per original */
+  }
+  
+  .project-card p {
+    color: #b0bfc6; /* Original secondary text color */
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .project-card .tags {
+    color: #5fb1c8; /* Adjusted to your original tag color */
+    font-size: 0.9em;
+    margin-top: 15px;
+  }
+  
+  .icon i {
+    font-size: 1.2em;
+  }
+  
+  .project-card-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .project-card-icons a {
+    color: #38bdf8;
+    font-size: 1.25rem;
+    margin-right: 15px;
+  }

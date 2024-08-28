@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
     <style>     
-    body {margin:0;}
+    body {margin:0; background-color: #233554;}
      .typed-out{
         overflow: hidden;
-        border-right: .15em solid orange;
+        border-right: .15em solid  #233554;
         white-space: nowrap;
         animation: typing 2s steps(20, end) forwards, blinking .8s infinite;
         font-size: 1.6rem;
@@ -25,14 +27,14 @@
       }
       @keyframes blinking {
         from { border-color: transparent }
-        to { border-color: orange; }
+        to { border-color: #64ffda; }
       }
 .img {
   float: right;
 }
 .accordion {
   background-color: #eee;
-  color: #444;
+  color: #233554;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -43,7 +45,7 @@
 }
 
 .active, .accordion:hover {
-  background-color: #9591cc; 
+  background-color: #64ffda; 
 }
 
   .panel {
@@ -68,121 +70,163 @@
 
   }
 
-  .CV-page {
-  max-width: 70%;
-  margin: 0 auto;
-  padding: 0 2em;
-  color: #0d1521;
-  font-size: 1em;
-}
+ 
+/*projects*/
 
-@media all and (max-width: 500px) {
-  .CV-page {
-    padding: 0 1em;
+
+@media (max-width: 1024px) {
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+        max-width: calc(50% - 20px);
+    }
   }
-}
-/* if IE<=7 */
+  
+  @media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 100%; /* 1 card per row on small screens */
+        max-width: 100%;
+    }
+  }
+  
+  
+  
+  
+  /* Container to center the grid */
+  .projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #121212; /* Adjust according to your original background color */
+  }
+  
+  /* Grid layout for projects */
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* grid-template-columns: repeat(3, 1fr);  */
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto; 
+  }
+  
+  /* Project card styling */
+  .project-card {
+    flex: 1 1 calc(33.333% - 20px); /* 33.333% width minus the gap to fit 3 cards in a row */
+    max-width: calc(33.333% - 20px);
+    background-color: #233554; /* Adjust to original card color */
+    border-radius: 8px;
+    padding: 20px;
+    color: #ffffff; /* Adjust to original text color */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-card-header .icon {
+    color: #00bfa5; /* Adjust to match your original accent color */
+    margin-left: 10px;
+  }
+  
+  .project-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Adjust font size as per original */
+  }
+  
+  .project-card p {
+    color: #b0bfc6; /* Original secondary text color */
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  .project-card .tags {
+    color: #5fb1c8; /* Adjusted to your original tag color */
+    font-size: 0.9em;
+    margin-top: 15px;
+  }
+  
+  .icon i {
+    font-size: 1.2em;
+  }
+  
+  .project-card-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .project-card-icons a {
+    color: #38bdf8;
+    font-size: 1.25rem;
+    margin-right: 15px;
+  }
 
-.CV-page\ {
-  width: 1100px;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
-}
 
-.CV-secondaryHeading {
+
+
+  /*timeline*/
+  
+.timeline-wrapper {
   position: relative;
-  margin: 2em 0 0;
-  text-transform: uppercase;
-  color: #fff;
+  padding: 22px 0;
 }
-/* Grid
-****************************************************/
-
-.CV-grid {
-  display: table;
+.timeline-wrapper:last-child:before {
+  height: 0;
 }
-
-.CV-grid-column {
-  display: table-cell;
-}
-
-.CV-timeline {
-  position: relative;
-  margin: 0 0 0 0.5em;
-  padding-left: 1.5em;
-  border-left: solid 1px #4272a9;
-}
-
-.CV-timeline:first-of-type {
-  margin-top: 1em;
-}
-
-.CV-timeline:last-of-type {
-  border-left-color: transparent;
-}
-
-.CV-timeline:before {
+.timeline-wrapper:before {
   content: "";
+  background: #474559;
+  width: 3px;
+  height: 100%;
   position: absolute;
-  top: 0;
-  left: -0.5em;
+  left: 38px;
+}
+
+.timeline-yr {
+  background: #233554;
+  border-radius: 100%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+.timeline-yr span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
   display: block;
-  width: 1em;
-  height: 1em;
-  border: solid 1px #4272a9;
-  background-color: #0e0d26;
-  border-radius: 50%;
+  line-height: 75px;
 }
 
-.CV-timeline-heading {
-  margin: 0;
-  padding-bottom: 0.5em;
-  line-height: 1em;
-  font-weight: normal;
-  -webkit-transform: translateY(-0.1em);
-  -ms-transform: translateY(-0.1em);
-  transform: translateY(-0.1em);
+.timeline-info {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 432px;
+  margin-left: 6em;
 }
-
-.CV-timeline-heading-title {
-  line-height: 1;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.CV-timeline-heading-location {
-  font-size: 0.9em;
-  color: #bbdefb;
-}
-
-.CV-timeline-heading-duration {
-  display: block;
-  font-size: 0.8em;
-  color: #bbdefb;
-}
-
-.CV-timeline-details {
-  display: block;
-  font-size: 15px;
-  color: rgb(203, 215, 234);
-  margin: 0;
-  padding-bottom: 2em;
-  padding: 0 0 2em 1em;
-  list-style-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGElEQVQIW2NkYGD4D8TIgJERTQDMpVAQAGaUAQbko3DsAAAAAElFTkSuQmCC");
-}
-
-.CV-timeline-details-item {
-  margin-bottom: 0.5em;
-}
-
-.CV-card-col{
-    background-color: #fff;
-    opacity: 0.3;
-}
-.CV-card{
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
+.timeline-info small {
+  color: #474559;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
 }
 
       
@@ -222,9 +266,35 @@
               </div>
             </div>
             <div class="col-md-9 col-xl-5">
-              <p class="fs-2">I'm a <b style="color:white">Digital Strategist</b> at Sakalya Wisdom Foundation and am part of the third cohort for Deep Learning at <b style="color:white">Indian Institute of Science, Bangalore</b>. I'm an Army Brat with a mixed cultural identity and people skills. I have great interest in full-stack development and artificial intelligence.</p>
-              <!--<form method="get" action="C:\Users\anubh\Downloads\Safia-v1.0.1\public\assets\docs\cv.pdf"></form>
-              <button class="btn btn-primary mt-3">Download Resume</button>-->
+              <p class="fs-2">A Computer Engineering student at <span style="color: white; font-weight: bold;">New York University</span> focusing on Machine Learning, I’m passionate about innovative solutions. My strong foundation in Computer Science and a Deep Learning certification equip me to tackle challenges effectively. I’m eager to contribute my analytical and problem-solving skills to a forward-thinking organization.</p>
+              <style>
+                .custom-button {
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 10px 20px;
+                    border: 0.5px solid #66ffe6; /* Match the border color */
+                    border-radius: 5px;
+                    /*background-color: #102c3e;  Match the background color */
+                    color: #66ffe6; /* Match the text color */
+                    font-size: 18px;
+                    text-decoration: none;
+                    transition: background-color 0.3s, color 0.3s;
+                }
+        
+                .custom-button i {
+                    margin-right: 8px;
+                }
+        
+                .custom-button:hover {
+                    background-color: #66ffe6;
+                    color: #102c3e; /* Invert the colors on hover */
+                }
+            </style>
+
+            <a href="assets/docs/cv.pdf" class="custom-button">
+              <i class="uil uil-envelope"></i>
+              Check out my CV!
+            </a>
             </div>
           </div>
         </div>
@@ -236,227 +306,372 @@
       
       <section>
 
-        <div class="container">
-          <h1 class="display-6 fw-semi-bold" id="Key-Projects">Key Projects</h1>
-          <p class="fs-2">Here's a few of the 14 projects I did as a part of my course work!</p>
-          <div class="row mb-4 mt-6">
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><img src="assets/img/gallery/dashboardicon.png" alt="C Graphics Project" style="width:48px;height:48px;" />
-                  <h3 class="pt-3 lh-base">C Graphics Project</h3>
-                  <p class="mb-0">Designed a project to demonstrate the usage of graphics in C. Experimented with various mathematical functions to depict basic shapes. The final submission included rain, a sunrise and a rainbow. </p>
+        <!-- PROJECTS -->
+    <section class="project py-5" id="Projects">
+      
+      <div class="container">
+              
+              <div class="row">
+                <div class="col-lg-11 text-center mx-auto col-12">
+
+                    <div class="col-lg-8 mx-auto">
+                      <h2>Projects</h2>
+                      <br>
+                    </div>
+
+                    <div class="">
+                      <div class="item">
+                        <div class="project-info">
+                          <div class="projects-grid">
+                            <div class="project-card">
+                                <div class="project-card-header">
+                                    <i class="uil uil-folder"></i>
+                                    <div class="project-card-icons">
+                                        <a href="https://github.com/itskavyagupta/NYU-DL-Cerberus" class="icon" target="_blank"><i class="uil uil-github-alt"></i></a>
+                                    </div>
+                                </div>
+                                <h3>ResNet from Scratch</h3>
+                                <p>A custom ResNet model on the CIFAR-10 dataset achieved 95.01% accuracy.</p>
+                                <p class="tags">Tensorflow CNN</p>
+                            </div>
+                            <!-- Repeat .project-card for each project -->
+
+
+                            <div class="project-card">
+                              <div class="project-card-header">
+                                  <i class="uil uil-folder"></i>
+                                  <div class="project-card-icons">
+                                      <a href="https://github.com/aaanubha/Eunoia" class="icon" target="_blank"><i class="uil uil-github-alt"></i></a>
+                                  </div>
+                              </div>
+                              <h3>Eunoia</h3>
+                              <p>A student app for students to manage To-Do lists, upload notes, and enjoy a virtual study ambiance with music.</p>
+                              <p class="tags">Flutter Dart Firebase</p>
+                          </div>
+
+                          <div class="project-card">
+                            <div class="project-card-header">
+                                <i class="uil uil-folder"></i>
+                                <div class="project-card-icons">
+                                    <a href="https://github.com/itskavyagupta/Synthetic-Image-Through-Diffusion" class="icon" target="_blank"><i class="uil uil-github-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3>Synthetic Medical Image Generation</h3>
+                            <p>A diffusion model that aims to enhance AI-driven dermatology diagnostics by fine-tuning to generate synthetic images. </p>
+                            <p class="tags">ViT Tensorflow</p>
+                        </div>
+
+                        <div class="project-card">
+                          <div class="project-card-header">
+                              <i class="uil uil-folder"></i>
+                              <div class="project-card-icons">
+                                  <a href="assets/docs/big_data.pdf" class="icon" target="_blank"><i class="uil uil-external-link-alt"></i></a>
+                              </div>
+                          </div>
+                          <h3>Recommendation Model with Spark ALS</h3>
+                          <p>A collaborative filtering recommendation model using Spark’s ALS algorithm. </p>
+                          <p class="tags">Python Spark</p>
+                      </div>
+
+                      <div class="project-card">
+                        <div class="project-card-header">
+                            <i class="uil uil-folder"></i>
+                            <div class="project-card-icons">                              
+                              <a href="https://github.com/madhurimaha/NYC_Transit_Hub" class="icon" target="_blank"><i class="uil uil-github-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3>MTA Transit Hub</h3>
+                        <p>A web application providing real-time transit updates, route planning, and service
+                          alerts using the MTA API.</p>
+                        <p class="tags">Web Sockets Firebase</p>
+                    </div>
+
+                    <div class="project-card">
+                      <div class="project-card-header">
+                          <i class="uil uil-folder"></i>
+                          <div class="project-card-icons">                              
+                            <a href="https://github.com/aaanubha/space-invaders-java" class="icon" target="_blank"><i class="uil uil-github-alt"></i></a>
+                          </div>
+                      </div>
+                      <h3>Space Invaders</h3>
+                      <p>Deleloped the game 'Space Invaders' using JavaFX.</p>
+                      <p class="tags">Java</p>
+                  </div>
+
+                      
+                        </div>
+                        </div>
+                      </div>
+                      
+
+                      
+
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><a href="https://github.com/aaanubha/space-invaders-java"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
-                  <h3 class="pt-3 lh-base">Java: Space Invaders</h3>
-                  <p class="mb-0">Developed code for the popular game ‘Space Invaders’. Used javafx and showed the use of various concepts learnt in lectures such as Inheritance, Static & This keyword, access specifiers, Objects, Loops, Arrays etc.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mb-4">
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><img src="assets/img/gallery/trilored.png" alt="HTML: Web Design" style="width:48px;height:48px;" />
-                  <h3 class="pt-3 lh-base">HTML: Web Design</h3>
-                  <p class="mb-0">Designed an interactive website for a 'Book Cafe'. Used HTML, CSS & Javascript and enabled the users to browse through a list of books and meals, add them to their cart, and make user accounts to pay for the same.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><a href="https://github.com/aaanubha/Eunoia"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
-                  <h3 class="pt-3 lh-base">Eunoia- Final Project</h3>
-                  <p class="mb-0">Created a student app using Flutter and Google Firebase that allows the user to create a To-Do list, upload notes and have a virtual study ambiance with music</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><img src="assets/img/gallery/profile.png" alt="Profiles" style="width:48px;height:48px;" />
-                  <h3 class="pt-3 lh-base">Research Paper</h3>
-                  <p class="mb-0">ABSTRACT:In recent years, there have been numerous improvements and changes in the field of STEM. Many researches showed that visual programming languages like Scratch and programming have a positive effect on understanding of concepts. In this paper, we aim to discover the relationship between coding practices and understanding of CS and mathematical concepts.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><img src="assets/img/gallery/folder.png" alt="Folders" style="width:48px;height:48px;" />
-                  <h3 class="pt-3 lh-base">Descriptive and Applied Statistics Project</h3>
-                  <p class="mb-0">Project and presentation describing in detail the change in agricultural practices over the past decade. We took data from official Indian statistics websites such as NSSO, NSO, NCRB, and applied concepts learnt to it. In order to make the presentation more appealing to other students at home, we used memes in order to explain our working.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><a href="https://github.com/aaanubha/ML_projects/blob/main/News_Prediction.ipynb"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
-                  <h3 class="pt-3 lh-base">Fake News Prediction </h3>
-                  <p class="mb-0">Created a ML model based on data from Kaggle which classifies news as fake or real
-                    <br>• Libraries Used: Pandas, Numpy, sklearn, nltk
-                    <br>• Models Used: Logistic Regression
-                    </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="border rounded-1 border-700 h-100 features-items">
-                <div class="p-5"><a href="https://drive.google.com/file/d/15SY4iqRom0RbidjXfUoDQAS56M6kUQFu/view"><img src="Images/github.png" style="width:55px;height:48px;" /></a>
-                  <h3 class="pt-3 lh-base">Statistical Survey on Impact of Patriarchy in Society</h3>
-                  <p class="mb-0">Conducted an analysis titled – ‘The Unmanly Man’ that aims to which aims to understand the social stigma and patriarchy that affect men across age groups, in India. Performed various analysis including correlation, test for independence of attributes etc.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+  </section>
+
+       
           
-        </div>
+          
         <!-- end of .container-->
 
       </section>
       <!-- <section> close ============================-->
       <!-- ============================================-->
-      <div class="container">
+      <!-- <div class="container">
         <div class="row align-items-center">
-      <div class="w3-container">
-        <h1 class="display-6 fw-semi-bold" id="Education">Education</h1>
-        <br>
-        <div class="w3-row">
-          <a href="javascript:void(0)" onclick="openCity(event, 'London');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: #9591cc
-              ;">Mount Carmel College | 2022</p></div>
-          </a>
-          <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: #9591cc ;">Sophia High School | 2019</p></div>
-          </a>
-          <!---->
-          <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
-            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><p style="color: #9591cc ;">Shemford Doon | 2017</p></div>
-          </a>
+
+
+        <style>
+        * {box-sizing: border-box}
+        body {font-family: "Lato", sans-serif;}
+
+        /* Style the tab */
+        .tab {
+          float: left;
+          border: 1px solid #ccc;
+          background-color: #f1f1f1;
+          width: 30%;
+          height: 350px;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+          display: block;
+          background-color: inherit;
+          color: black;
+          padding: 22px 16px;
+          width: 100%;
+          border: none;
+          outline: none;
+          text-align: left;
+          cursor: pointer;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #9591cc;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+          background-color: #9591cc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+          float: left;
+          padding: 0px 12px;
+          border: 1px solid #ccc;
+          width: 70%;
+          border-left: none;
+          height: 350px;
+        }
+        </style>
+
+        <body>
+
+          <h1 class="display-6 fw-semi-bold" id="Experience">Education</h1>
+
+          <br>
+
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'iisc')" id="defaultOpen">Indian Institute of Science</button>
+          <button class="tablinks" onclick="openCity(event, 'mcc')">Mount Carmel College</button>
+          <button class="tablinks" onclick="openCity(event, 'shs')">Sohpia High School</button>
+          <button class="tablinks" onclick="openCity(event, 'sd')">Shemford Doon</button>
         </div>
-      
-        <div id="London" class="w3-container city" style="display:none">
-          <br>
-          <h2>Mount Carmel College</h2>
-          <br>
-          <p>
-            2019 - 2022<br>
-            Mount Carmel College, Bangalore<br><br>
 
-            BSc CMS (Computer Science, Mathematics and Statistics)<br><br>
-
-            • First Class Exemplary<br>
-            • Secretary of Computer Science<br>
-            • Secretary of Reel Run Productions<br></p>
+        <div id="iisc" class="tabcontent">
+          <h3><br>Indian Institute of Science, Bangalore [2022-2023]</h3>
+          <p>Third Cohort of Deep Learning<br><br>
+          • Completed with Grade 'A', 84%<br></p>
         </div>
-      
-        <div id="Paris" class="w3-container city" style="display:none">
-          <br>
-          <h2>Sophia High School, Bangalore</h2>
-          <br>
-            
-            2017 - 2019<br>
-            Sophia High School, Bangalore <br>
-            XII<br><br>
 
-            • Physics (81), Chemistry (75), Mathematics (92), Computer Science (97) in ISC<br>
+        <div id="mcc" class="tabcontent">
+          <h3><br>Mount Carmel College, Bangalore University [2019-2022]</h3>
+          <p>BSc CMS (Computer Science, Mathematics and Statistics)<br><br>
 
-            • Student Council<br></div>
-      
-        <div id="Tokyo" class="w3-container city" style="display:none">
-          <br>
-          <h2>Shemford Doon, Dehradun</h2>
-          <p>
-            <br>
-            2015 - 2017<br>
-            Shemford Doon, Dehradun<br>
-            X<br><br>
-            
-            • 10 CGPA in CBSE<br>
+                    • First Class Exemplary<br>
+                    • Secretary of Computer Science<br>
+                    • Secretary of Reel Run Productions<br></p> 
+        </div>
+
+        <div id="shs" class="tabcontent">
+          <h3><br>Sohpia High School [2017-2019]</h3>
+          <p>• Physics (81), Chemistry (75), Mathematics (92), Computer Science (97) in ISC<br>
+
+                    • Student Council<br></p>
+        </div>
+
+        <div id="sd" class="tabcontent">
+          <h3><br>Shemford Doon [2015-2017]</h3>
+          <p>• 10 CGPA in CBSE<br>
             • Recepient of Chairman's Medal <br>
-            • Student Council<br>
-            
-            </p>
+            • Student Council
+            <br><br><br></p>
         </div>
-      </div>
-      </div>
-      </div>
-      
-      <script>
-      function openCity(evt, cityName) {
-        var i, x, tablinks;
-        x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
+
+        <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
         }
-        tablinks = document.getElementsByClassName("tablink");
-        for (i = 0; i < x.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" w3-border-yellow", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.firstElementChild.className += " w3-border-yellow";
-      }
-      </script>
 
-
-
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+   
+ -->
 
       <!-- ============================================-->
       <!-- <section> begin ============================-->
 <br><br>
           <!---  ---------------------  EXPERIENCES  --------------------------- --->
           <div class="container">
-            <h1 class="display-6 fw-semi-bold" id="Experience">Experience</h1>
-            <main class="CV-page">
-                <div class="CV-grid">
-                  <div class="CV-grid-column">
-                    <div class="CV-jobs">
+            <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="Experience">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-lg-6 col-12">
+                <h2 class="mb-4">Experiences</h2>
+
+                  <div class="timeline">
+                      <div class="timeline-wrapper">
+                           <div class="timeline-yr">
+                                <span>2024</span>
+                           </div>
+                           <div class="timeline-info">
+                                <h3><span>Software Engineering Intern</span><small>Vara</small></h3>
+                                <p><li>Built a carbon footprint calculator with React and Climatiq API.
+                                   <li>Developed a machine learning agent within a chatbot using RAG to summarize citations on Amazon SageMaker and Docker.</p>
+                           </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2023-24</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Course Assistant (DS)</span><small>NYU Stern</small></h3>
+                              <p>Guided 50+ students through coursework and assignments, improving their performance. Managed grading and feedback under Professor Richard DiSalvo.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2023</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Digital Strategist<small>Sakalya Wisdom Foundation</small></h3>
+                              <p><li>Designed and maintained the Sakalya Wisdom Early Years website, boosting traffic by 90% in the first year.
+
+                                <li>Increased marketing ROI by 25% with innovative strategies.
+                                <li>Managed budgets effectively, saving 10% on costs while maintaining campaign success.</p>
+                          </div>
+                      </div>
                       
-                      <section class="CV-timeline CV-job ">
-                        <div class="CV-card">
-                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title"> Digital Strategist  </span>&#8211; <span class="CV-timeline-heading-location">Sakalya Wisdom Foundation </span><small class="CV-timeline-heading-duration">July 2022 - Present</small></h3>
-                        <li class="CV-timeline-details">● Designed and maintained the website for Sakalya Prep- The Holistic Preschool <br>
-                            ● Developed and customized worksheets, videos, and other resources for the school <br>
-                            ● Spearheaded marketing campaigns, curated personalized customer experience, and optimized different marketing channels and budget <br>
+                      <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2022</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>ML Intern<small>Analysed Variant Labs</small></h3>
+                              <p>Built dataset, performed data preprocessing, and trained models using Azure ML. Created a Flask API for the implementation of the model.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2022</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Full Stack Developer<small>Lean It India</small></h3>
+                              <p>Led a team of 5 while implementing a full-stack website using HTML, CSS, JavaScript, and MySQL that can effectuate features such as creating new accounts, scheduling video calls, and storing details in the database.</p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>2021</span>
                         </div>
-                    </section>
-        
-                    <section class="CV-timeline CV-job ">
-                        <div class="CV-card">
-                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title"> Machine Learning Intern</span>&#8211; <span class="CV-timeline-heading-location">Analysed Variant Labs </span><small class="CV-timeline-heading-duration">Oct 2022 - Present</small></h3>
-                        <li class="CV-timeline-details">Built dataset, performed data preprocessing, and trained models using Azure ML. Created a Flask API for the 
-                            implementation of the model.
+                        <div class="timeline-info">
+                            <h3><span>ML Intern<small>91 Square Ft</small></h3>
+                            <p>Developed a service to automate the process of annotation by matching wrongly annotated products with the correct ones existing in the catalog.</p>
                         </div>
-                    </section>
-        
-                    <section class="CV-timeline CV-job ">
-                        <div class="CV-card">
-                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title">Full Stack Developer</span>&#8211; <span class="CV-timeline-heading-location">Lean IT India Private Limited </span><small class="CV-timeline-heading-duration">Dec 2021- Jan 2022</small></h3>
-                        <li class="CV-timeline-details">
-                            Led a team of 5 while implementing a full-stack website using HTML, CSS, JavaScript, and MySQL that can 
-                            effectuate features such as creating new accounts, scheduling video calls, and storing details in the database.
-                        </div>
-                    </section>
-        
-                    <section class="CV-timeline CV-job ">
-                        <div class="CV-card">
-                        <h3 class="CV-timeline-heading"><span class="CV-timeline-heading-title">Machine Learning Developer</span>&#8211; <span class="CV-timeline-heading-location">91 Square Feet</span><small class="CV-timeline-heading-duration">June 2021- July 2022</small></h3>
-                        <li class="CV-timeline-details">Developed a service to automate the process of annotation by matching wrongly annotated products with the correct 
-                            ones existing in the catalog.
-                            
-                        </div>
-                    </section>
-        
                     </div>
+
                   </div>
-                </div>
-              </main>
-        </div>
+              </div>
+
+              <div class="col-lg-6 col-12">
+                <h2 class="mb-4 mobile-mt-2">Education</h2>
+
+                  <div class="timeline">
+                      <div class="timeline-wrapper">
+                           <div class="timeline-yr">
+                                <span>2025</span>
+                           </div>
+                           <div class="timeline-info">
+                                <h3><span>Masters in Computer Engineering</span><small>New York University</small></h3>
+                                <p> <li>Relevant Courses: ML, DL, Big Data
+                                    <li>Recipient of Wasserman Grant   
+
+                                </p>
+                           </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2023</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Advanced PG Certification in Deep Learning </span><small>Indian Institute of Science</small></h3>
+                              <p> </p>
+                          </div>
+                      </div>
+
+                      <div class="timeline-wrapper">
+                        <div class="timeline-yr">
+                            <span>2022</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h3><span>BSc in CS, Maths and Stats</span><small>Bangalore University</small></h3>
+                            <p><li>First Class Exemplary</li>
+                              <li>Secretary of Computer Science</li>
+                              <li>Secretary of Reel Run Productions </li></p>
+                        </div>
+                    </div>
+                      
+                      <!-- <div class="timeline-wrapper">
+                          <div class="timeline-yr">
+                              <span>2013</span>
+                          </div>
+                          <div class="timeline-info">
+                              <h3><span>Artwork Design</span><small>New Art School</small></h3>
+                              <p>You can freely use Tooplate's templates for your business or personal sites. You cannot redistribute this template without a permission.</p>
+                          </div> -->
+                      </div>
+
+                  </div>
+              </div>
+              
+          </div>
+      </div>
+  </section>
         <!-- end of .container-->
 
       </section>
@@ -465,7 +680,7 @@
 
       <!-- <section> close ============================-->
       <!-- ============================================-->
-      <div class="container">
+      <!-- <div class="container">
         <div class="text-center">
           
           <h1 class="display-6 fw-semi-bold" id="Extra-Curriculars">Extra-Curriculars</h1>
@@ -525,20 +740,22 @@
           }
         });
       }
-      </script>
+      </script> -->
 
     <!-- hover menu-->
     <div id="content-desktop">
     <ul id=menu style="list-style-type:none">
-      <li style="color: #7E8BB6"><b>Menu</b></a></li>
-      <li><a href="#Key-Projects" style="color: #7E8BB6">Key Projects</a></li>
-      <li><a href="#Education" style="color: #7E8BB6">Education</a></li>
+      <!-- <li style="color: #7E8BB6"><b>Menu</b></a></li> -->
+      <li><a href="#Projects" style="color: #7E8BB6">Key Projects</a></li>
+      <li><a href="#Experience" style="color: #7E8BB6">Education</a></li>
       <li><a href="#Experience" style="color: #7E8BB6">Experience</a></li>
-      <li><a href="#Extra-Curriculars" style="color: #7E8BB6">Extra-Curriculars</a>
+      <!-- <li><a href="#Extra-Curriculars" style="color: #7E8BB6">Extra-Curriculars</a> -->
         <li>
-          <a href="https://github.com/aaanubha" target="_blank"><img src="Images/bgithub.png" width="32" height="32"></a>
+          <!-- <a href="https://github.com/aaanubha" target="_blank"><img src="Images/bgithub.png" width="32" height="32"></a> -->
+          <a href="https://github.com/aaanubha" style="color: #7E8BB6; font-size: 24px;" class="icon"><i class="uil uil-github"></i></a>
                 &nbsp;
-          <a href="https://www.linkedin.com/in/anubha-singh-b19280190/" target="_blank"><img src="Images/linkdin.png" width="32" height="32"></a>
+          <a href="https://www.linkedin.com/in/anubha-s" style="color: #7E8BB6; font-size: 24px;" class="icon"><i class="uil uil-linkedin"></i></a>
+          <!-- <a href="https://www.linkedin.com/in/anubha-singh-b19280190/" target="_blank"><img src="Images/linkdin.png" width="32" height="32"></a> -->
           
       </li>
     </ul>
@@ -554,7 +771,7 @@
         <div class="container">
          
             <div class="col-xl-4 pt-2 pt-xl-0">
-              <p class="mb-0 text-center text-xl-end"> © 2022 by Anubha Singh
+              <p class="mb-0 text-center text-xl-end"> © 2024 by Anubha Singh
               </p>
             </div>
             
